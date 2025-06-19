@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Centre El-Manar</title>
+    <!-- Bootstrap CSS intégré via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- Police Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Mini personnalisations indispensables */
+      body {
+        font-family: "Montserrat", sans-serif;
+        padding-top: 72px; /* Compensation pour la navbar fixe */
+      }
+      .video-overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+      }
+      .navbar-scrolled {
+        background-color: #000 !important;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      }
+      .card {
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .btn-warning {
+        transition: all 0.3s ease;
+      }
+      .btn-warning:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+          <span class="text-warning">Centre El Manar</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-semibold" href="#accueil">Accueil</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-semibold" href="#formations">Formations</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-semibold" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bannière avec vidéo -->
+    <header id="accueil" class="position-relative vh-100">
+      <video autoplay muted loop class="w-100 h-100 object-fit-cover">
+        <source src="assets/videos/presentation.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
+      <div
+        class="video-overlay d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100"
+      >
+        <div class="text-white text-center px-3">
+          <h1 class="display-3 fw-bold mb-4">Osez apprendre, osez réussir</h1>
+          <p class="lead mb-5">Formations professionnelles pour votre avenir</p>
+          <a
+            href="#formations"
+            class="btn btn-warning btn-lg px-4 py-2 fw-bold"
+          >
+            Découvrir nos formations <i class="bi bi-arrow-down ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section Formations -->
+    <section id="formations" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Nos Formations</h2>
+          <div class="mx-auto" style="max-width: 700px">
+            <p class="lead text-muted">
+              Découvrez nos programmes conçus pour répondre aux besoins du
+              marché professionnel.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              <img
+                src="assets/images/informatique.jpg"
+                class="card-img-top object-fit-cover"
+                alt="Informatique"
+                style="height: 200px"
+              />
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-laptop text-warning fs-3 me-3"></i>
+                  <h5 class="card-title mb-0">Informatique</h5>
+                </div>
+                <p class="card-text text-muted">
+                  Maîtrisez les outils numériques avec nos formations en
+                  bureautique, programmation et développement web.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Word, Excel, PowerPoint
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Python, Java, C++
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >HTML, CSS, JavaScript
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="#contact" class="btn btn-outline-warning w-100"
+                  >S'inscrire</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+              <img
+                src="assets/images/langues.jpg"
+                class="card-img-top object-fit-cover"
+                alt="Langues"
+                style="height: 200px"
+              />
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-translate text-warning fs-3 me-3"></i>
+                  <h5 class="card-title mb-0">Langues</h5>
+                </div>
+                <p class="card-text text-muted">
+                  Développez vos compétences linguistiques pour communiquer
+                  efficacement dans un environnement international.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Anglais général et professionnel
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Français des affaires
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i
+                    >Allemand débutant à avancé
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="#contact" class="btn btn-outline-warning w-100"
+                  >S'inscrire</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-5 bg-white">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Contactez-nous</h2>
+            <p class="lead text-muted">
+              Une question ? Un projet ? N'hésitez pas à nous contacter.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form id="contactForm" class="row g-3">
+              <div class="col-md-6">
+                <label for="nom" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nom"
+                  placeholder="Votre nom"
+                  required
+                />
+                <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Votre email"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Veuillez entrer une adresse email valide.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Votre message"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Veuillez entrer votre message.
+                </div>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-warning px-4 py-2 fw-bold">
+                  <i class="bi bi-send-fill me-2"></i>Envoyer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="text-warning mb-4">Centre El Manar</h5>
+            <p class="text-white">
+              Formations professionnelles de qualité pour votre réussite
+              personnelle et professionnelle.
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="text-warning mb-4">Liens rapides</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#accueil" class="text-decoration-none text-white"
+                  >Accueil</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#formations" class="text-decoration-none text-white"
+                  >Formations</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-decoration-none text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="text-warning mb-4">Contact</h5>
+            <ul class="list-unstyled text-white">
+              <li class="mb-2">
+                <i class="bi bi-geo-alt-fill me-2 text-warning"></i> Adresse du
+                centre
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone-fill me-2 text-warning"></i> +123 456
+                789
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill me-2 text-warning"></i>
+                contact@elmanar.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-secondary" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 text-white">
+              © 2024 Centre El Manar - Tous droits réservés
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-decoration-none text-white me-3"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-white me-3"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-white me-3"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-white"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script perso -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
